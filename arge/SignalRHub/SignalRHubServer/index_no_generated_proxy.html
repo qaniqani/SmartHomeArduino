@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SignalR Echo</title>
+    <script type="text/javascript" src="Scripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.signalR-1.1.3.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        function htmlEncode(value) {
+            return $("<div/>").text(value).html();
+        }
+
+        function addMsg(msg) {
+            $("#messages").append("<li>" + htmlEncode(msg) + "</li>");
+        }
+
+        $(function () {
+            // Connect Hubs without the generated proxy
+            var connection = $.hubConnection("/myhubs");
+            var timeHubProxy = connection.createHubProxy("PascalCasedMyDateTimeHub");
+            var chatHubProxy = connection.createHubProxy("myChatHub");
+
+            // Register client function to be called by server
+            chatHubProxy.on("appendNewMessage", function (clientName, message) {
+                addMsg(clientName + ": " + message);
+            });
+
+            // Start the hub connection
+            addMsg("Connecting Hub...");
+            connection.start().done(function () {
+                addMsg("Hub connected.");
+
+                $("#refreshServerTime").click(function () {
+                    timeHubProxy.invoke("PascalCasedGetServerDateTime").done(function (serverTime) {
+                        $("#serverTime").text(serverTime);
+                    });
+                });
+
+                $("#send").click(function () {
+                    chatHubProxy.invoke("broadcastMessage", $("#name").val(), $("#msg").val());
+                });
+            }).fail(function () {
+                addMsg("Could not connect to Hub.");
+            });
+        });
+    </script>
+    <table>
+        <tr>
+            <td>
+                <span>Server Time: </span>
+            </td>
+            <td>
+                <span id="serverTime">N/A</span>
+            </td>
+            <td>
+                <input type="button" value="Refresh" id="refreshServerTime" />
+            </td>
+        </tr>
+        <tr>
+            <td><span>Name:</span></td>
+            <td>
+                <input type="text" id="name" />
+            </td>
+            <td />
+            <td />
+        </tr>
+        <tr>
+            <td><span>Message:</span></td>
+            <td>
+                <input type="text" id="msg" />
+            </td>
+            <td>
+                <input type="button" value="Send" id="send" />
+            </td>
+            <td />
+        </tr>
+    </table>
+    <ul id="messages"></ul>
+</body>
+</html>

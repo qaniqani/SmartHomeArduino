@@ -1,0 +1,65 @@
+{
+  "name": "ascoltatori",
+  "version": "0.11.5",
+  "description": "The pub/sub library for node backed by Redis, MongoDB, AMQP (RabbitMQ), ZeroMQ, MQTT (Mosquitto) or just plain node!",
+  "main": "index.js",
+  "scripts": {
+    "test": "make bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcollina/ascoltatori.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mcollina/ascoltatori/issues"
+  },
+  "keywords": [
+    "publish",
+    "subscribe",
+    "pubsub",
+    "rabbitmq",
+    "zeromq",
+    "0mq",
+    "mqtt",
+    "amqp",
+    "mosquitto",
+    "mongodb",
+    "mongo",
+    "pub",
+    "sub"
+  ],
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "contributors": [
+    "Filippo De Pretto <filnik90@gmail.com>",
+    "David Halls <dave@davedoesdev.com>"
+  ],
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "chai": "~1.7.0",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0",
+    "optimist": "~0.6.0",
+    "async_bench": "~0.1.0",
+    "dox-foundation": "0.4.4",
+    "mosca": "git://github.com/mcollina/mosca.git",
+    "jshint": "~2.1.0",
+    "js-beautify": "~0.4.2",
+    "istanbul": "~0.1.40",
+    "coveralls": "~2.0.16"
+  },
+  "dependencies": {
+    "async": "~0.2.6",
+    "debug": "~0.7.2",
+    "node-uuid": "~1.4.0",
+    "qlobber": "~0.3.0"
+  },
+  "optionalDependencies": {
+    "redis": "~0.8.1",
+    "zmq": "~2.4.0",
+    "amqp": "~0.1.8",
+    "mqtt": "~0.3.1",
+    "mongodb": "~1.3.20",
+    "eventemitter2": "~0.4.12"
+  }
+}

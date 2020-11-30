@@ -1,0 +1,10 @@
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\SignalRHubClient.exe.config
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\SignalRHubClient.exe
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\SignalRHubClient.pdb
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\obj\Debug\SignalRHubClient.csprojResolveAssemblyReference.cache
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\obj\Debug\SignalRHubClient.exe
+C:\Users\Gani\Desktop\SignalRHub\SignalRHubClient\obj\Debug\SignalRHubClient.pdb

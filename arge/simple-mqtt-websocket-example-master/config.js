@@ -1,0 +1,11 @@
+// host = '172.16.153.122';	// hostname or IP address
+host = '185.12.110.49';	// hostname or IP address
+// host = '172.16.153.110';	// hostname or IP address
+port = 1883;
+topic = '#';		// topic to subscribe to
+useTLS = false;
+username = "admin";
+password = "qw12QW**";
+// username = "jjolie";
+// password = "aa";
+cleansession = false;
