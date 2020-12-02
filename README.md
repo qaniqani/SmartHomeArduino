@@ -19,7 +19,7 @@ Fire Sensor
 
 -Step Motor
 
--Motorcycle driver
+-Motor Driver
 
 -Ethernet
 
